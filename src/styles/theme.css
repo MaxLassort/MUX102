@@ -1,0 +1,103 @@
+/* =========================================================================
+ * Design tokens — milleSouvenir
+ * Single source of truth for colors, spacing, typography, radii, shadows.
+ * Reference these as `var(--token-name)` everywhere; never hard-code values.
+ * ========================================================================= */
+
+:root {
+  /* ---------- Palette: primary (warm wine) ---------- */
+  --color-primary: #592223;
+  --color-primary-container: #753838;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #f8a4a3;
+  --color-primary-fixed: #ffdad8;
+  --color-primary-fixed-dim: #ffb3b1;
+
+  /* ---------- Palette: secondary (cool blue) ---------- */
+  --color-secondary: #426089;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #b0cefd;
+  --color-on-secondary-container: #395780;
+
+  /* ---------- Palette: tertiary (sage) ---------- */
+  --color-tertiary: #2a381d;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #404f32;
+
+  /* ---------- Accents ---------- */
+  --color-rose-wash: #e2bab6;
+  --color-sand-grey: #f8f8f8;
+  --color-paper-white: #ffffff;
+  --color-ink-dark: #1d1c14;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+
+  /* ---------- Surfaces ---------- */
+  --color-background: #f9f9f9;
+  --color-surface: #f9f9f9;
+  --color-surface-dim: #dadada;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f4;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  --color-surface-variant: #e2e2e2;
+
+  /* ---------- Text / Outline ---------- */
+  --color-on-background: #1a1c1c;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #534342;
+  --color-outline: #857372;
+  --color-outline-variant: #d8c1c0;
+
+  /* ---------- Typography: families ---------- */
+  --font-headline: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Atkinson Hyperlegible Next', system-ui, sans-serif;
+  --font-icon: 'Material Symbols Outlined';
+
+  /* ---------- Typography: scale ---------- */
+  --text-headline-lg: 700 40px/48px var(--font-headline);
+  --text-headline-lg-mobile: 700 32px/38px var(--font-headline);
+  --text-headline-md: 600 30px/38px var(--font-headline);
+  --text-body-lg: 450 20px/30px var(--font-body);
+  --text-body-md: 450 17px/26px var(--font-body);
+  --text-button: 700 18px/24px var(--font-body);
+  --text-label-lg: 800 16px/24px var(--font-body);
+  --text-caption-caps: 800 10px/12px var(--font-body);
+
+  --letter-spacing-label: 0.04em;
+  --letter-spacing-caps: 0.1em;
+
+  /* ---------- Spacing ---------- */
+  --space-stack-sm: 16px;
+  --space-stack-md: 32px;
+  --space-stack-lg: 64px;
+  --space-gutter: 32px;
+  --space-margin-mobile: 24px;
+  --space-margin-desktop: 120px;
+  --space-touch-target: 56px;
+
+  /* ---------- Radii ---------- */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  --shadow-nav: 0 -4px 20px -2px rgba(0, 0, 0, 0.08);
+  --shadow-fab: 0 8px 24px -4px rgba(89, 34, 35, 0.35);
+
+  /* ---------- Motion ---------- */
+  --ease-gentle: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 400ms;
+
+  /* ---------- Layout ---------- */
+  --layout-max-width: 768px;
+  --topbar-height: 80px;
+  --bottomnav-height: 80px;
+}

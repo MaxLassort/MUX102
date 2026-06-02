@@ -1,0 +1,83 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--topbar-height);
+  padding: 0 var(--space-margin-mobile);
+  background-color: rgba(249, 249, 249, 0.9);
+  border-bottom: 1px solid rgb(133 115 114 / 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@media (min-width: 768px) {
+  .bar {
+    padding: 0 var(--space-margin-desktop);
+  }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brandText {
+  font: var(--text-headline-md);
+  color: var(--color-primary);
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.link {
+  font: var(--text-label-lg);
+  letter-spacing: var(--letter-spacing-label);
+  color: var(--color-on-surface-variant);
+  transition: opacity var(--duration-base) var(--ease-gentle);
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.linkActive {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.account {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 30px;
+  transition: opacity var(--duration-base) var(--ease-gentle);
+}
+
+.account:hover {
+  opacity: 0.8;
+}
+
+.account .material-symbols-outlined {
+  font-size: 30px;
+}
