@@ -14,10 +14,15 @@
   border-bottom: 1px solid rgb(133 115 114 / 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  overflow: hidden;
 }
 
 @media (min-width: 768px) {
+  .bar {
+    padding: 0 var(--space-stack-md);
+  }
+}
+
+@media (min-width: 1200px) {
   .bar {
     padding: 0 var(--space-margin-desktop);
   }
@@ -28,7 +33,7 @@
   align-items: center;
   gap: 12px;
   min-width: 0;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   overflow: hidden;
 }
 
@@ -51,6 +56,12 @@
 
 @media (min-width: 768px) {
   .brandText {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .brandText {
     font-size: 30px;
   }
 }
@@ -58,12 +69,19 @@
 .nav {
   display: none;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
+  flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
   .nav {
     display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    gap: 32px;
   }
 }
 

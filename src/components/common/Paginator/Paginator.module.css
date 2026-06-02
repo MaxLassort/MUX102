@@ -1,0 +1,91 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: var(--space-stack-sm);
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-md);
+}
+
+.sizeGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+}
+
+.sizeLabel {
+  white-space: nowrap;
+}
+
+.select {
+  height: 36px;
+  padding: 0 28px 0 12px;
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-sm);
+  color: var(--color-on-surface);
+  font: var(--text-body-md);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23534342'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.select:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.range {
+  font: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+}
+
+.nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  transition: background-color var(--duration-base) var(--ease-gentle),
+    color var(--duration-base) var(--ease-gentle);
+}
+
+.btn:hover:not(:disabled) {
+  background-color: var(--color-surface-container);
+  color: var(--color-primary);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.pageInfo {
+  min-width: 56px;
+  padding: 0 8px;
+  font: var(--text-label-lg);
+  letter-spacing: var(--letter-spacing-label);
+  color: var(--color-on-surface);
+  text-align: center;
+}

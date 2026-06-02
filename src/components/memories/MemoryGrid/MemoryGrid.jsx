@@ -1,10 +1,9 @@
 import MemoryCard from '../MemoryCard'
-import NewMemoryCard from '../NewMemoryCard'
 import Tooltip from '../../common/Tooltip'
 import { POC_TOOLTIP } from '../../../utils/constants.js'
 import styles from './MemoryGrid.module.css'
 
-export default function MemoryGrid({ memories = [], onCreate }) {
+export default function MemoryGrid({ memories = [] }) {
   return (
     <div className={styles.grid}>
       {memories.map((memory) => (
@@ -17,11 +16,6 @@ export default function MemoryGrid({ memories = [], onCreate }) {
           </Tooltip>
         </div>
       ))}
-      <div>
-        <Tooltip text={POC_TOOLTIP} position="top">
-          <NewMemoryCard onClick={onCreate} />
-        </Tooltip>
-      </div>
     </div>
   )
 }
