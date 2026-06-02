@@ -6,7 +6,15 @@
   color: rgba(255, 255, 255, 0.87);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
+}
+
+a {
+  color: #646cff;
 }

@@ -1,0 +1,5 @@
+/**
+ * Custom React hooks.
+ * Example: useLocalStorage, useDebounce, useFetch.
+ * One hook per file: hooks/useDebounce.js
+ */

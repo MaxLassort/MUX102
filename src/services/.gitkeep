@@ -1,0 +1,5 @@
+/**
+ * External services / API clients.
+ * Example: services/api.js, services/storage.js.
+ * Keep network/IO logic here, not in components.
+ */

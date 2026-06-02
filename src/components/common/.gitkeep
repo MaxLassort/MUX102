@@ -1,0 +1,8 @@
+/**
+ * Common / atomic reusable UI components.
+ * Examples: Button, Input, Card, Modal, Badge.
+ * Each component should live in its own folder:
+ *   common/Button/Button.jsx
+ *   common/Button/Button.module.css
+ *   common/Button/index.js
+ */

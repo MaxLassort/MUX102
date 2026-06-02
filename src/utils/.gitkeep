@@ -1,0 +1,4 @@
+/**
+ * Pure utility functions (formatters, validators, date helpers...).
+ * No React imports here — keep them framework-agnostic.
+ */

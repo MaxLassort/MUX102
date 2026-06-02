@@ -1,0 +1,4 @@
+/**
+ * Layout components: Header, Footer, Sidebar, PageLayout.
+ * These compose the visual frame shared across pages.
+ */

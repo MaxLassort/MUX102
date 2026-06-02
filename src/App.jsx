@@ -1,16 +1,6 @@
-import { useState } from 'react'
-import './App.css'
+import { RouterProvider } from 'react-router-dom'
+import router from './routes/router.jsx'
 
 export default function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="app">
-      <h1>MUX102</h1>
-      <p>Projet React déployé via GitHub Pages.</p>
-      <button onClick={() => setCount((c) => c + 1)}>
-        compteur : {count}
-      </button>
-    </div>
-  )
+  return <RouterProvider router={router} />
 }
