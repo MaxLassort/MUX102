@@ -1,0 +1,50 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: var(--color-paper-white);
+  color: var(--color-on-surface-variant);
+  border: 2px solid var(--color-outline-variant);
+  border-radius: var(--radius-full);
+  font: var(--text-button);
+  cursor: pointer;
+  transition: background-color var(--duration-base) var(--ease-gentle),
+    color var(--duration-base) var(--ease-gentle),
+    border-color var(--duration-base) var(--ease-gentle),
+    transform var(--duration-base) var(--ease-gentle);
+}
+
+.chip:hover {
+  background-color: var(--color-surface-variant);
+}
+
+.chip:active {
+  transform: scale(0.97);
+}
+
+.chip .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.chipSelected {
+  background-color: var(--color-rose-wash);
+  color: var(--color-primary-container);
+  border-color: var(--color-rose-wash);
+  box-shadow: var(--shadow-card);
+}
+
+.chipSelected:hover {
+  background-color: var(--color-rose-wash);
+}
+
+.chipAdd {
+  border-style: dashed;
+  border-color: var(--color-outline);
+}

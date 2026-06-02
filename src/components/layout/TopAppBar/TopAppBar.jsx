@@ -12,18 +12,6 @@ export default function TopAppBar() {
         <span className={styles.brandText}>Mille Souvenirs</span>
       </Link>
 
-      <nav className={styles.nav} aria-label="Navigation principale">
-        <Tooltip text={POC_TOOLTIP}>
-          <a className={styles.link} href="#">Home</a>
-        </Tooltip>
-        <Tooltip text={POC_TOOLTIP}>
-          <a className={`${styles.link} ${styles.linkActive}`} href="#">Memories</a>
-        </Tooltip>
-        <Tooltip text={POC_TOOLTIP}>
-          <a className={styles.link} href="#">Capture</a>
-        </Tooltip>
-      </nav>
-
       <Tooltip text={POC_TOOLTIP} position="bottom">
         <button className={styles.account} aria-label="Compte">
           <span className="material-symbols-outlined">account_circle</span>

@@ -1,0 +1,35 @@
+.bar {
+  width: 100%;
+  padding-top: var(--space-stack-md);
+}
+
+.btn {
+  width: 100%;
+  height: 72px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 24px;
+  background-color: var(--color-rose-wash);
+  color: var(--color-primary-container);
+  border: 2px solid rgba(226, 186, 182, 0.5);
+  border-radius: var(--radius-full);
+  font: var(--text-button);
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: opacity var(--duration-base) var(--ease-gentle),
+    transform var(--duration-base) var(--ease-gentle);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn .material-symbols-outlined {
+  font-size: 24px;
+}

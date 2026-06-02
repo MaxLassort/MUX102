@@ -2,6 +2,7 @@ import { createHashRouter } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 import HomePage from '../pages/HomePage'
 import AboutPage from '../pages/AboutPage'
+import NewMemoryPage from '../pages/NewMemoryPage'
 import NotFoundPage from '../pages/NotFoundPage'
 
 // HashRouter is used so the app works out of the box on GitHub Pages
@@ -14,6 +15,7 @@ const router = createHashRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'about', element: <AboutPage /> },
+      { path: 'new', element: <NewMemoryPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },

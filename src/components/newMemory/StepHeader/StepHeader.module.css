@@ -1,0 +1,27 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 28px;
+  padding: 0 12px;
+  background-color: var(--color-rose-wash);
+  color: var(--color-primary-container);
+  font: var(--text-label-lg);
+  font-size: 13px;
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+}
+
+.title {
+  margin: 0;
+  font: var(--text-headline-md);
+  color: var(--color-primary-container);
+}

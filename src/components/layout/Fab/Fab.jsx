@@ -1,18 +1,15 @@
-import Tooltip from '../../common/Tooltip'
-import { POC_TOOLTIP } from '../../../utils/constants.js'
+import { Link } from 'react-router-dom'
 import styles from './Fab.module.css'
 
-/** Floating Action Button (desktop only). */
+/** Floating Action Button — opens the new memory page. */
 export default function Fab() {
   return (
-    <Tooltip text={POC_TOOLTIP} position="top">
-      <button
-        className={styles.fab}
-        aria-label="Capturer un nouveau souvenir"
-        type="button"
-      >
-        <span className="material-symbols-outlined">add</span>
-      </button>
-    </Tooltip>
+    <Link
+      to="/new"
+      className={styles.fab}
+      aria-label="Capturer un nouveau souvenir"
+    >
+      <span className="material-symbols-outlined">add</span>
+    </Link>
   )
 }

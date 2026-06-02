@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  background-color: var(--color-surface-variant);
+  border: 2px solid var(--color-outline-variant);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.btn {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-paper-white);
+  color: var(--color-secondary);
+  border: 2px solid rgba(66, 96, 137, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--duration-base) var(--ease-gentle),
+    background-color var(--duration-base) var(--ease-gentle),
+    color var(--duration-base) var(--ease-gentle);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: var(--color-secondary);
+  color: var(--color-paper-white);
+}
+
+.btn .material-symbols-outlined {
+  font-size: 32px;
+}
+
+.btnRecording {
+  background-color: var(--color-error);
+  color: var(--color-on-error);
+  border-color: var(--color-error);
+}
+
+.btnRecording .material-symbols-outlined {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.text {
+  flex: 1;
+}
+
+.title {
+  margin: 0 0 4px;
+  font: var(--text-label-lg);
+  color: var(--color-secondary);
+}
+
+.subtitle {
+  margin: 0;
+  font: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+}
+
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+    text-align: left;
+  }
+}
