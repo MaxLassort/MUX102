@@ -42,6 +42,40 @@
   text-transform: uppercase;
 }
 
+.audio {
+  position: absolute;
+  bottom: var(--space-stack-sm);
+  right: var(--space-stack-sm);
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--color-primary);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(8px);
+  transition: transform var(--duration-base) var(--ease-gentle),
+    background-color var(--duration-base) var(--ease-gentle);
+}
+
+.audio:hover {
+  transform: scale(1.08);
+  background-color: var(--color-paper-white);
+}
+
+.audio:active {
+  transform: scale(0.95);
+}
+
+.audio .material-symbols-outlined {
+  font-size: 24px;
+  font-variation-settings: 'FILL' 1;
+}
+
 .body {
   display: flex;
   flex-direction: column;
