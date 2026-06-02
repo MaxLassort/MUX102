@@ -1,0 +1,9 @@
+{
+  "tags": [
+    { "id": "tag_famille",     "label": "Famille",     "slug": "famille",     "icon": "family_history", "color": "primary"   },
+    { "id": "tag_voyage",      "label": "Voyage",      "slug": "voyage",      "icon": "beach_access",   "color": "secondary" },
+    { "id": "tag_gastronomie", "label": "Gastronomie", "slug": "gastronomie", "icon": "restaurant",     "color": "tertiary"  },
+    { "id": "tag_jardin",      "label": "Jardin",      "slug": "jardin",      "icon": "yard",           "color": "tertiary"  },
+    { "id": "tag_pause",       "label": "Pause",       "slug": "pause",       "icon": "self_care",      "color": "secondary" }
+  ]
+}
