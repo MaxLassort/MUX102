@@ -17,6 +17,7 @@
     color: var(--color-on-primary);
     border-radius: var(--radius-full);
     box-shadow: var(--shadow-fab);
+    cursor: pointer;
     transition: transform var(--duration-base) var(--ease-gentle);
   }
 

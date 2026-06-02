@@ -5,13 +5,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   width: 100%;
+  max-width: 100%;
   height: var(--topbar-height);
   padding: 0 var(--space-margin-mobile);
   background-color: rgba(249, 249, 249, 0.9);
   border-bottom: 1px solid rgb(133 115 114 / 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -24,17 +27,32 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .logo {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   object-fit: contain;
 }
 
 .brandText {
   font: var(--text-headline-md);
+  font-size: 20px;
+  line-height: 1.2;
   color: var(--color-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .brandText {
+    font-size: 30px;
+  }
 }
 
 .nav {

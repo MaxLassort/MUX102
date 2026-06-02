@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-gutter);
+}
+
+.grid > * {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.grid > * > span {
+  display: block;
+  width: 100%;
+}
+
+.grid > * > span > * {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wide {
+    grid-column: span 2;
+  }
+}
