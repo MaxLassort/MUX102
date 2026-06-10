@@ -2,8 +2,16 @@ import Tooltip from '../../common/Tooltip'
 import { POC_TOOLTIP } from '../../../utils/constants.js'
 import styles from './MemoryCard.module.css'
 
-export default function MemoryCard({ memory }) {
+/**
+ * @param {object} props
+ * @param {object} props.memory
+ * @param {'default' | 'list'} [props.variant]
+ *   `'default'` = vignette empilée (photo en haut, texte dessous).
+ *   `'list'`    = rendu horizontal compact (photo à gauche, texte à droite).
+ */
+export default function MemoryCard({ memory, variant = 'default' }) {
   const { title, excerpt, dateDisplay, photo, tags = [] } = memory
+  const isList = variant === 'list'
 
   const handlePlayAudio = (e) => {
     e.stopPropagation()
@@ -11,11 +19,8 @@ export default function MemoryCard({ memory }) {
   }
 
   return (
-    <article className={styles.card}>
-      <div
-        className={styles.media}
-        style={photo?.aspectRatio ? { aspectRatio: photo.aspectRatio.replace('/', ' / ') } : undefined}
-      >
+    <article className={`${styles.card} ${isList ? styles.cardList : ''}`}>
+      <div className={styles.media}>
         {photo?.url && <img src={photo.url} alt={photo.alt ?? ''} className={styles.image} />}
         {dateDisplay && <span className={styles.date}>{dateDisplay}</span>}
       

@@ -1,8 +1,14 @@
 import Tooltip from '../../common/Tooltip'
+import Toggle from '../../common/Toggle'
 import { POC_TOOLTIP } from '../../../utils/constants.js'
 import styles from './SearchBar.module.css'
 
-export default function SearchBar() {
+/**
+ * @param {object} props
+ * @param {boolean} [props.listView]
+ * @param {(next: boolean) => void} [props.onListViewChange]
+ */
+export default function SearchBar({ listView = false, onListViewChange }) {
   return (
     <div className={styles.row}>
       <Tooltip text={POC_TOOLTIP} position="bottom">
@@ -22,6 +28,17 @@ export default function SearchBar() {
           <span className="material-symbols-outlined">tune</span>
           <span className={styles.filtersLabel}>Filtres</span>
         </button>
+      </Tooltip>
+
+      <Tooltip text={POC_TOOLTIP} position="bottom">
+        <Toggle
+          checked={listView}
+          onChange={onListViewChange}
+          leftIcon={<span className="material-symbols-outlined">grid_view</span>}
+          rightIcon={<span className="material-symbols-outlined">view_list</span>}
+          leftLabel="Vue grille"
+          rightLabel="Vue liste"
+        />
       </Tooltip>
     </div>
   )

@@ -12,7 +12,9 @@ export default function HomePage() {
   const { data: tags, loading: loadingTags, error: errorTags } = useFetch(listTags)
 
   const [page, setPage] = useState(1)
-  const [pageSize, setPageSize] = useState(4)
+  const [pageSize, setPageSize] = useState(8)
+  // `false` = toutes les cards en mode classique, `true` = toutes en mode wide.
+  const [listView, setListView] = useState(false)
 
   const tagsById = useMemo(() => (tags ? indexTags(tags) : null), [tags])
 
@@ -40,8 +42,8 @@ export default function HomePage() {
 
   return (
     <div className={styles.page}>
-      <SearchBar />
-      <MemoryGrid memories={paginated} />
+      <SearchBar listView={listView} onListViewChange={setListView} />
+      <MemoryGrid memories={paginated} layout={listView ? 'wide' : 'classic'} />
       <Paginator
         page={page}
         pageSize={pageSize}

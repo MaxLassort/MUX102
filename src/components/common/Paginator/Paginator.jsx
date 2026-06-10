@@ -2,7 +2,7 @@ import Tooltip from '../../common/Tooltip'
 import { POC_TOOLTIP } from '../../../utils/constants.js'
 import styles from './Paginator.module.css'
 
-const DEFAULT_PAGE_SIZES = [4, 8, 12, 24]
+const DEFAULT_PAGE_SIZES = [8, 12, 24]
 
 /**
  * Generic paginator with page-size selector and page navigation.
