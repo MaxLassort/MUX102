@@ -30,16 +30,14 @@ export default function SearchBar({ listView = false, onListViewChange }) {
         </button>
       </Tooltip>
 
-      <Tooltip text={POC_TOOLTIP} position="bottom">
-        <Toggle
-          checked={listView}
-          onChange={onListViewChange}
-          leftIcon={<span className="material-symbols-outlined">grid_view</span>}
-          rightIcon={<span className="material-symbols-outlined">view_list</span>}
-          leftLabel="Vue grille"
-          rightLabel="Vue liste"
-        />
-      </Tooltip>
+      <Toggle
+        checked={listView}
+        onChange={onListViewChange}
+        leftIcon={<span className="material-symbols-outlined">grid_view</span>}
+        rightIcon={<span className="material-symbols-outlined">view_list</span>}
+        leftLabel="Vue grille"
+        rightLabel="Vue liste"
+      />
     </div>
   )
 }

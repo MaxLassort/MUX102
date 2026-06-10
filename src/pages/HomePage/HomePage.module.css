@@ -1,5 +1,12 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: var(--space-stack-md);
+  gap: var(--space-stack-sm);
+  flex: 1;
+  min-height: 0;
+}
+
+/* Pousse le Paginator (dernier enfant) en bas de la section. */
+.page > :last-child {
+  margin-top: auto;
 }

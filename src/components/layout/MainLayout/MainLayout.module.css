@@ -7,26 +7,25 @@
 
 .main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: var(--layout-max-width);
   margin: 0 auto;
-  padding: var(--space-stack-lg) var(--space-margin-mobile);
+  padding: var(--space-stack-sm) var(--space-margin-mobile);
 }
 
 @media (min-width: 768px) {
   .main {
     max-width: 960px;
-    padding-left: var(--space-stack-md);
-    padding-right: var(--space-stack-md);
-    padding-bottom: var(--space-stack-lg);
+    padding: 12px var(--space-stack-md);
   }
 }
 
 @media (min-width: 1200px) {
   .main {
     max-width: 1200px;
-    padding-left: var(--space-stack-md);
-    padding-right: var(--space-stack-md);
+    padding: 12px var(--space-stack-md);
   }
 }
 
