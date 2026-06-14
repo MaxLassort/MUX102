@@ -45,38 +45,136 @@
   text-transform: uppercase;
 }
 
-.audio {
+/* ---------- Like button (top-right of media) ---------- */
+.like {
   position: absolute;
-  bottom: 10px;
+  top: 10px;
   right: 10px;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.92);
-  color: var(--color-primary);
-  border: 1px solid var(--color-outline-variant);
+  background-clip: padding-box;
+  color: var(--color-on-surface-variant);
+  border: none;
   border-radius: var(--radius-full);
   cursor: pointer;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.18),
+    0 6px 16px -4px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transform: translateZ(0);
   transition: transform var(--duration-base) var(--ease-gentle),
-    background-color var(--duration-base) var(--ease-gentle);
+    background-color var(--duration-base) var(--ease-gentle),
+    color var(--duration-base) var(--ease-gentle);
 }
 
-.audio:hover {
-  transform: scale(1.08);
+.like:hover {
+  transform: translateZ(0) scale(1.08);
   background-color: var(--color-paper-white);
+  color: var(--color-primary);
+  box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.22),
+    0 10px 22px -4px rgba(0, 0, 0, 0.28);
 }
 
-.audio:active {
-  transform: scale(0.95);
+.like:active {
+  transform: translateZ(0) scale(0.92);
 }
 
-.audio .material-symbols-outlined {
-  font-size: 20px;
+.like .material-symbols-outlined {
+  font-size: 18px;
+  transition: font-variation-settings var(--duration-base) var(--ease-gentle);
+}
+
+.likeActive {
+  color: var(--color-primary);
+}
+
+.likeActive .material-symbols-outlined {
   font-variation-settings: 'FILL' 1;
+}
+
+/* ---------- Action bar (footer) ---------- */
+.actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 6px 8px 6px 12px;
+}
+
+.actions::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background-color: var(--color-surface-container-high);
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: 1 1 auto;
+  color: var(--color-on-surface-variant);
+  font: var(--text-label-lg);
+  font-size: 12px;
+  letter-spacing: var(--letter-spacing-label);
+}
+
+.location .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.locationLabel {
+  color: var(--color-primary);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-gentle),
+    color var(--duration-fast) var(--ease-gentle);
+}
+
+.actionBtn:hover,
+.actionBtn:focus-visible {
+  background-color: var(--color-surface-container);
+  outline: none;
+}
+
+.actionBtn:active {
+  background-color: var(--color-surface-container-high);
+}
+
+.actionBtn .material-symbols-outlined {
+  font-size: 22px;
 }
 
 .body {
@@ -109,9 +207,9 @@
 .title {
   margin: 0;
   font: var(--text-headline-md);
-  font-size: 15px;
+  font-size: 19px;
   line-height: 1.2;
-  color: var(--color-on-surface);
+  color: var(--color-primary);
 }
 
 .excerpt {
@@ -138,10 +236,10 @@
   max-height: 140px;
 }
 
-/* En mode liste, .media ne sert plus de contexte de positionnement
- * pour que .audio puisse se caler en top-right de toute la card. */
+/* En mode liste, .media reste positionnée classiquement — plus besoin de
+ * contexte global puisque les actions vivent dans le footer. */
 .cardList .media {
-  position: static;
+  position: relative;
   width: 180px;
   aspect-ratio: auto;
   height: 100%;
@@ -166,16 +264,19 @@
   font-size: 10px;
 }
 
-/* Bouton audio en haut à droite de la card (même style qu'en mode grid) */
-.cardList .audio {
-  top: 10px;
-  right: 10px;
-  bottom: auto;
-  left: auto;
+.cardList .like {
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+}
+
+.cardList .like .material-symbols-outlined {
+  font-size: 16px;
 }
 
 .cardList .title {
-  font-size: 17px;
+  font-size: 21px;
   order: 1;
 }
 

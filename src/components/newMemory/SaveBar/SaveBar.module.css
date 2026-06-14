@@ -33,3 +33,20 @@
 .btn .material-symbols-outlined {
   font-size: 24px;
 }
+
+@media (min-width: 1200px) {
+  .bar {
+    padding-top: var(--space-stack-sm);
+  }
+
+  .btn {
+    height: 48px;
+    gap: 12px;
+    padding: 0 20px;
+    border-width: 1px;
+  }
+
+  .btn .material-symbols-outlined {
+    font-size: 20px;
+  }
+}

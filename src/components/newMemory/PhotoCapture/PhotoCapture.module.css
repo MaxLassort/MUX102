@@ -110,3 +110,25 @@
   border-radius: var(--radius-full);
   backdrop-filter: blur(8px);
 }
+
+@media (min-width: 1200px) {
+  .frame {
+    max-height: 160px;
+  }
+
+  .captureBtn {
+    width: 52px;
+    height: 52px;
+  }
+
+  .captureBtn .material-symbols-outlined {
+    font-size: 26px;
+  }
+
+  .close {
+    width: 36px;
+    height: 36px;
+    top: 12px;
+    right: 12px;
+  }
+}

@@ -1,14 +1,23 @@
 import Tooltip from '../../common/Tooltip'
 import Toggle from '../../common/Toggle'
+import SortMenu from '../SortMenu'
 import { POC_TOOLTIP } from '../../../utils/constants.js'
+import { DEFAULT_SORT } from '../../../utils/sort.js'
 import styles from './SearchBar.module.css'
 
 /**
  * @param {object} props
  * @param {boolean} [props.listView]
  * @param {(next: boolean) => void} [props.onListViewChange]
+ * @param {string} [props.sort]
+ * @param {(next: string) => void} [props.onSortChange]
  */
-export default function SearchBar({ listView = false, onListViewChange }) {
+export default function SearchBar({
+  listView = false,
+  onListViewChange,
+  sort = DEFAULT_SORT,
+  onSortChange,
+}) {
   return (
     <div className={styles.row}>
       <Tooltip text={POC_TOOLTIP} position="bottom">
@@ -23,12 +32,7 @@ export default function SearchBar({ listView = false, onListViewChange }) {
         </label>
       </Tooltip>
 
-      <Tooltip text={POC_TOOLTIP} position="bottom">
-        <button type="button" className={styles.filters}>
-          <span className="material-symbols-outlined">tune</span>
-          <span className={styles.filtersLabel}>Filtres</span>
-        </button>
-      </Tooltip>
+      <SortMenu value={sort} onChange={onSortChange} />
 
       <Toggle
         checked={listView}

@@ -48,3 +48,19 @@
   border-style: dashed;
   border-color: var(--color-outline);
 }
+
+@media (min-width: 1200px) {
+  .row {
+    gap: 8px;
+  }
+
+  .chip {
+    padding: 6px 14px;
+    border-width: 1px;
+    font: var(--text-label-lg);
+  }
+
+  .chip .material-symbols-outlined {
+    font-size: 16px;
+  }
+}

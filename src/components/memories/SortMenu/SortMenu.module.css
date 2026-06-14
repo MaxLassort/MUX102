@@ -1,0 +1,114 @@
+.root {
+  position: relative;
+  display: inline-flex;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 18px;
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-full);
+  color: var(--color-on-surface-variant);
+  font: var(--text-label-lg);
+  letter-spacing: var(--letter-spacing-label);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--duration-base) var(--ease-gentle),
+    border-color var(--duration-base) var(--ease-gentle);
+}
+
+.trigger:hover,
+.trigger[aria-expanded='true'] {
+  background-color: var(--color-surface-container);
+  border-color: var(--color-primary);
+}
+
+.trigger .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.chevron {
+  font-size: 20px;
+  color: var(--color-on-surface-variant);
+  transition: transform var(--duration-base) var(--ease-gentle);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.triggerLabel {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .triggerLabel {
+    display: inline;
+  }
+}
+
+/* ---------- Popover menu ---------- */
+
+.menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 220px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  z-index: 20;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-on-surface);
+  font: var(--text-body-md);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-gentle);
+}
+
+.option:hover,
+.option:focus-visible {
+  background-color: var(--color-surface-container);
+  outline: none;
+}
+
+.option .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--color-on-surface-variant);
+  flex-shrink: 0;
+}
+
+.optionLabel {
+  flex: 1 1 auto;
+}
+
+.optionActive {
+  background-color: var(--color-surface-container);
+  color: var(--color-primary);
+}
+
+.optionActive .material-symbols-outlined {
+  color: var(--color-primary);
+}
+
+.check {
+  margin-left: auto;
+}

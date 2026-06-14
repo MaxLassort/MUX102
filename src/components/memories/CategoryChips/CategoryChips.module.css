@@ -1,0 +1,90 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 4px 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-full);
+  color: var(--color-on-surface-variant);
+  font: var(--text-label-lg);
+  letter-spacing: var(--letter-spacing-label);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color var(--duration-base) var(--ease-gentle),
+    border-color var(--duration-base) var(--ease-gentle),
+    color var(--duration-base) var(--ease-gentle);
+}
+
+.chip:hover {
+  background-color: var(--color-surface-container);
+  border-color: var(--color-primary);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.chip .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.label {
+  font: var(--text-label-lg);
+  letter-spacing: var(--letter-spacing-label);
+}
+
+/* ---------- Active state ---------- */
+
+.chip.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.chip.active:hover {
+  background-color: var(--color-primary-container);
+  border-color: var(--color-primary-container);
+}
+
+.chip.color_secondary.active {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
+.chip.color_secondary.active:hover {
+  background-color: var(--color-secondary-container);
+  border-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+.chip.color_tertiary.active {
+  background-color: var(--color-tertiary);
+  border-color: var(--color-tertiary);
+  color: var(--color-on-tertiary);
+}
+
+.chip.color_tertiary.active:hover {
+  background-color: var(--color-tertiary-container);
+  border-color: var(--color-tertiary-container);
+  color: var(--color-on-tertiary);
+}

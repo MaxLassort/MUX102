@@ -10,3 +10,28 @@
 .page > :last-child {
   margin-top: auto;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.title {
+  margin: 0;
+  font: var(--text-headline-lg-mobile);
+  color: var(--color-primary);
+}
+
+.subtitle {
+  margin: 0;
+  font: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font: var(--text-headline-lg);
+  }
+}
